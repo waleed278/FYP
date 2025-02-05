@@ -37,4 +37,4 @@ if __name__ == "__main__":
     print("Starting Python Flask Server for Car Price Prediction...")
     # Ensure artifacts are loaded before starting the server
     util.load_saved_artifacts()
-    app.run(debug=True)  # Enable debug mode for better error messages
+    app.run(host="0.0.0.0", port=8000,debug=True)  # Enable debug mode for better error messages

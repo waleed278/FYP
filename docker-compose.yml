@@ -1,0 +1,13 @@
+version: '3'
+services:
+  flask-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./model:/app/model
+      - ./server:/app/server
+    environment:
+      - FLASK_ENV=development
+    restart: always
+    command: ["python", "server/server.py"]
